@@ -1,0 +1,75 @@
+{
+  "name": "tcapim-graphql-proxy",
+  "description": "tcapim-graphql-proxy is a application to validate graphql queries in TIBCO Cloud API Management.",
+  "version": "1.0",
+  "type": "nodejs-app",
+  "resources": {
+    "physicalMemory": 1024,
+    "totalMemory": 4096,
+    "cpuQuota": 25
+  },
+  "endpoints": [    
+    {
+      "primary": true,
+      "protocol": "http",
+      "port": "8000",
+      "public": true,
+      "swagger": {
+        "swagger": "2.0",
+        "info": {
+          "version": "1.0",
+          "title": "tcapim-graphql-proxy",
+          "description": "Inline proxies for pre-processing of graphql requests"
+        },
+        "paths": {
+          "/preprocessor": {
+            "post": {
+              "produces": [],
+              "responses": {
+                "200": {
+                  "description": "Success response",
+                  "schema": {
+                    "type": "string"
+                  }
+                },
+                "400": {
+                  "description": "Bad Request",
+                  "schema": {
+                    "type": "string"
+                  }
+                }
+              },
+              "parameters": [],
+              "operationId": "gqlPreProcessor",
+              "description": "Inline proxies for pre-processing of graphql requests",
+              "summary": "Inline proxies for pre-processing of graphql requests"
+            }
+          }
+        }
+      },
+      "type": "public",
+      "pingable": false,
+      "spec": {
+        "name": "tcapim-graphql-proxy",
+        "version": "1.0"
+      }
+    }
+  ],
+  "properties": [
+    {
+      "name": "MAX_QUERY_DEPTH",
+      "datatype": "number",
+      "default": "3"
+    },
+    {
+      "name": "ALLOW_INTROSPECT",
+      "datatype": "boolean",
+      "default": "false"
+    },
+    {
+      "name": "ALLOW_MUTATION",
+      "datatype": "boolean",
+      "default": "false"
+    }
+  ]
+}

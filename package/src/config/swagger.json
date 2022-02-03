@@ -1,0 +1,33 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0",
+        "title": "tcapim-graphql-proxy",
+        "description": "Inline proxies for pre-processing of graphql requests"
+    },
+    "paths": {
+        "/preprocessor": {
+            "post": {
+                "produces": [],
+                "responses": {
+                    "200": {
+                        "description": "Success response",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "parameters": [],
+                "operationId": "gqlPreProcessor",
+                "description": "Inline proxy to validate graphql document and check for query depth, mutations and Introspection requests",
+                "summary": "Inline proxy to validate graphql document and check for query depth, mutations and Introspection requests"
+            }
+        }
+    }
+}

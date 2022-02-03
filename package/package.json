@@ -1,0 +1,21 @@
+{
+  "name": "tcapim-graphql-proxy",
+  "version": "1.0.0",
+  "description": "Inline proxies for pre-processing of graphql requests",
+  "main": "server.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server.js"
+  },
+  "author": "ajjoshi@tibco.com",
+  "license": "BSD",
+  "dependencies": {
+    "express": "4.17.2",
+    "fs": "0.0.1-security",
+    "graphql": "16.2.0",
+    "@looop/graphql-depth-limit": "1.1.0"
+  }
+}
