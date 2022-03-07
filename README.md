@@ -38,7 +38,7 @@ This section describes the steps for building the application.
 >**Prerequisites**: GraphQL Schema  
 Application needs a schema of the graphql backend to validate the graphql query. This repository includes a Countries schema for a quick setup and can be used to test against the graphql service available at  https://countries.trevorblades.com/graphql
 
-1. Clone this repository
+1. Clone this repository - `git clone https://github.com/TIBCOSoftware/tcapim-graphql-proxy.git`
 2. Rename your GraphQL Schema to _schema.graphql_
 3. Move _schema.graphql_ to `/package/src/config/`
 4. Create the deployable package by executing -  
@@ -46,6 +46,10 @@ Application needs a schema of the graphql backend to validate the graphql query.
 5. Update the text `tcapim-graphql-proxy` in _manifest.json_ to change the application and service name on TCI  
 
 This creates _tcapim-graphql-proxy.zip_ artifacts needed for deployment along with the updated _manifest.json_
+
+A short clip showing the above configurations -
+
+https://user-images.githubusercontent.com/29055956/156973954-363260c7-d22c-4032-a0b1-ce8544b83ad1.mp4
 
 ## Configuring Application on TCI
 
